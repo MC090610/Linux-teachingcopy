@@ -32,10 +32,10 @@ https://www.cvcidc.com/aff/IRVN
 点账户管理
 	实名认证
 	点个人实名
-	![[assets/全流程/Pasted image 20260111172841.png]]
+	![](演示文件/assets/全流程/Pasted%20image%2020260111172841.png)
 
 按照提示认证
 	然后找到安全中心
 	手机绑定
 	自己绑定一下
-	![[assets/全流程/Pasted image 20260111172947.png]]
+	
