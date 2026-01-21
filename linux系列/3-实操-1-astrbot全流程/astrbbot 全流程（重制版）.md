@@ -64,7 +64,7 @@ https://www.cvcidc.com/aff/IRVN
 	![](assets/astrbbot%20全流程（重制版）/file-20260121143122343.png)
 	![](assets/astrbbot%20全流程（重制版）/file-20260121143350868.png)
 	
-	然后在优惠吗的地方输入一下神秘小代码  
+然后在优惠吗的地方输入一下神秘小代码  
 	点应用应该就发现便宜了一点点（能薅多少是多少hh）  
 	选择余额付款
 	![](演示文件/assets/全流程/Pasted%20image%2020260111174105.png)
