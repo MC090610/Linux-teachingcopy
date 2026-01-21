@@ -38,4 +38,293 @@ https://www.cvcidc.com/aff/IRVN
 	然后找到安全中心
 	手机绑定
 	自己绑定一下
+	![](演示文件/assets/全流程/Pasted%20image%2020260111172947.png)
+
+认证完成之后
+	点击财务管理
+	账户充值
+	充值金额填30
+	自己选择付款方式
+	![](演示文件/assets/全流程/Pasted%20image%2020260111173220.png)
+
+#### 购买服务器
+~~专属全站9折优惠券:HIC90~~ 
+准备工作完成之后
+	点击订购产品
+	活动
+	海外普通区
+	找到：美国Linux云主机 B型
+	点击立即购买
+	![](演示文件/assets/全流程/Pasted%20image%2020260111173332.png)
+	操作系统选择：Debian-Ubuntu-24.04.1-x64
+	密码自己改一下（当然不乐意改就系统随机）
+	剩下的默认
+	点立即加入购物车
+	![](assets/astrbbot%20全流程（重制版）/file-20260121143122343.png)
+	![](assets/astrbbot%20全流程（重制版）/file-20260121143350868.png)
 	
+	然后在优惠吗的地方输入一下神秘小代码  
+	点应用应该就发现便宜了一点点（能薅多少是多少hh）  
+	选择余额付款
+	![](演示文件/assets/全流程/Pasted%20image%2020260111174105.png)
+	付完款应该就能在  
+	产品于服务  
+		云服务器  
+	找到自己刚买的机子了
+	![](assets/astrbbot%20全流程（重制版）/file-20260121143640943.png)
+
+## 怎么用？
+
+
+> [!tip] 温馨提示
+> 除了国内机多了一个换源的步骤，剩下的都适应于安装了GNU/LINUX debian12_X64的操作系统
+
+
+
+点操作
+能看见这个画面
+![[assets/全流程/Pasted image 20260111191929.png]]
+
+主要看ssh登陆信息和ip地址，自己核对一下机子信息就行
+别的基本不用在意
+这个时候打开我提供的网盘，把大佬汉化的MobaXterm_24.3下载下来
+原github：https://github.com/RipplePiam/MobaXterm-Chinese-Simplified
+123网盘
+链接：https://www.123865.com/s/ToUrjv-8J2Zh?pwd=sj6p#
+提取码：sj6p
+夸克
+链接：https://pan.quark.cn/s/cc6a351c2830?pwd=BWBs
+提取码：BWBs
+**下载下来解压一下（没解压工具的自己下一个360压缩去）**
+**（不会解压的自己看电子扫盲课或者自己去b站搜一下，要是这个都不会就别搞了）**
+解压出来应该是这三个文件
+![[assets/全流程/Pasted image 20260111193250.png]]
+打开“MobaXterm_Personal_24.3”这个文件
+然后让你选择主题，这个随便了，看你自己
+![[assets/全流程/Pasted image 20260111193412.png]]
+点击这个会话![[assets/全流程/Pasted image 20260111193510.png]]
+按照下面的步骤来
+![[assets/全流程/Pasted image 20260111193728.png]]
+填完应该下面这个样子
+![[assets/全流程/Pasted image 20260111193900.png]]
+
+> [!WARNING] 注意！
+> 如果你购买的nat机要注意一下端口号！！！！
+> 如果你购买的nat机要注意一下端口号！！！！
+> 如果你购买的nat机要注意一下端口号！！！！
+> 需要自己修改端口号，如果你分不清就不要购买nat机！
+
+检查无误，点OK
+![[assets/全流程/Pasted image 20260111194319.png]]
+这个界面点**Accept**
+![[assets/全流程/Pasted image 20260111194730.png]]
+会出来这个界面，自己输密码，如果免密太长或者是系统默认的就复制一下
+
+> [!TIP] 热知识
+> 点一下密码能自动复制，MobaXterm里点一下鼠标中键能自动粘贴
+
+如果弹这个了自己选择
+![[assets/全流程/Pasted image 20260111195107.png]]
+
+![[assets/全流程/Pasted image 20260111195452.png]]
+
+如果看见这个界面
+那么恭喜你成功来到了linux的世界
+
+
+
+剩下的图文不好描述，看视频吧（其实我懒得写了）
+## 用到的命令
+### 换源
+
+> [!NOTE] 提示
+> 如果你是非中国大陆的服务器请跳过 此步骤直接跳转到《安装必要软件》这个章节
+
+
+```bash
+#检查是否为root权限
+id
+```
+如果是那么应该输出以下内容
+```shell
+uid=0(root) gid=0(root) 组=0(root)
+```
+执行以下步骤
+
+```bash
+wget https://linuxmirrors.cn/main.sh
+```
+
+```bash
+bash mian.sh
+```
+按照以下内容来依次选择（键盘上下左右操控）
+	中科大
+	https
+	取消覆盖
+	否
+	是
+
+### 安装必要软件
+```bash
+#安装必备软件
+apt update && apt install sudo vim git screen curl 
+```
+
+安装docker:
+
+```bash
+bash <(curl -sSL https://linuxmirrors.cn/docker.sh)
+```
+按照以下内容来依次选择（键盘上下左右操控）
+	官方源（国内机请选择清华）
+	官方 docker hub（国内机请选择毫秒）
+	https
+	是
+### 部署astrbot及消息适配器
+这里以QQ平台为例，所以使用nc框架
+使用docker来部署程序
+```bash
+curl -sSL https://raw.githubusercontent.com/railgun19457/AstrbotScript/main/AstrbotScript.sh -o AstrbotScript.sh
+chmod +x AstrbotScript.sh
+sudo ./AstrbotScript.sh
+```
+按照以下内容来依次选择（键盘数字键操控）
+	3
+	回车
+	1
+	回车
+	2
+	回车
+	3
+	回车
+等安装完事（大概5分钟左右）
+安装完事按回车
+然后快速按6(napcht)，然后回车
+然后按4（查看日志）回车
+应该会输出和下面差不多的内容
+```
+[INFO] 正在获取 napcat 服务的日志（按 Ctrl+C 退出）...
+usermod: no changes
+usermod: no changes
+not mini app.
+[preload] succeeded. /opt/QQ/resources/app/major.node
+[preload] succeeded. /opt/QQ/resources/app/major.node
+resourcesPath: /opt/QQ/resources
+NapCat Shell App Loading...
+01-11 22:11:52 [info] [NapCat Update] No pending updates found
+01-11 22:11:52 [info] [FFmpeg] 检查 Native Addon 可用性...
+01-11 22:11:52 [info] [FFmpeg] ✓ 使用 Native Addon 适配器
+prepare write and writev hooks
+01-11 22:11:53 [info] [PacketHandler] 加载成功
+01-11 22:11:53 [info] [PacketHandler] 初始化成功
+01-11 22:11:53 [info] [NapCat] [Core] NapCat.Core Version: 4.10.9
+01-11 22:11:53 [info] [NapCat] [WebUi] WebUi Token: 1e50c9ed0cee
+01-11 22:11:53 [info] [NapCat] [WebUi] WebUi User Panel Url: http://127.0.0.1:6099/webui?token=1e50c9ed0cee
+01-11 22:11:53 [info] [NapCat] [WebUi] WebUi User Panel Url: http://0.0.0.0:6099/webui?token=1e50c9ed0cee
+01-11 22:11:54 [info] 等待网络连接...
+01-11 22:11:54 [info] 网络已连接
+01-11 22:11:54 [info] 没有 -q 指令指定快速登录，将使用二维码登录方式
+01-11 22:11:55 [warn] 请扫描下面的二维码，然后在手Q上授权登录：
+01-11 22:11:55 [warn]
+................
+```
+
+咱只需要关注[WebUi]相关的就行
+把token=这后面的奇妙代码复制下来
+然后打开你得浏览器
+在地址栏输入
+```
+你服务器ip:6099
+```
+你会看见一个登陆页面，你把那串神秘代码复制进去，然后点登录
+登陆成功之后好看见下面这个界面
+![[assets/全流程/Pasted image 20260111222001.png]]
+咱点一下扫码登陆
+![[assets/全流程/Pasted image 20260111222027.png]]
+此时此刻你需要拿出你的手机
+	打开qq
+	登陆你的QQ小号
+	点右上角的+号
+	点击扫一扫
+	然后去扫你屏幕上显示的那个二维码
+	然后确认登陆
+如果没有意外那么应该就能成功登陆上了
+![[assets/全流程/Pasted image 20260111222324.png]]
+差不多这个样子
+点一下“网络配置”
+![[assets/全流程/Pasted image 20260111222422.png]]
+然后检查一下，是否和我一样
+![[assets/全流程/Pasted image 20260111222832.png]]
+这个时候要给你的小号发一条消息，内容是test
+然后点击猫猫日志
+![[assets/全流程/Pasted image 20260111223006.png]]
+确认会输出以下内容（这里我发了两次）
+![[assets/全流程/Pasted image 20260111223055.png]]
+
+困死我了
+懒得写了
+反正大致流程就是先访问
+```
+服务器ip:6185
+```
+然后默认账户和密码都是astrbot
+登陆进去会让你改密码，自己改一下
+然后点机器人
+创建机器人
+消息平台选择：**OneBot v11(QQ个人号等)**
+把启用点开（变蓝）
+然后保存
+选择无视警告并继续创建
+等个1分钟左右
+私聊人机的QQ号
+发 /help
+然后正常情况他应该返回巴拉巴拉的一大串
+```
+AstrBot v4.11.2(WebUI: v4.11.2)  
+内置指令:  
+/alter_cmd - 修改命令权限  
+/dashboard_update - 更新管理面板  
+/del - 删除当前对话  
+/deop - 取消授权管理员。deop <admin_id>  
+/dwl - 删除白名单。dwl <sid>  
+/groupnew - 创建新群聊对话  
+/help - 查看帮助  
+/history - 查看对话记录  
+/key - 查看或者切换 Key  
+/llm - 开启/关闭 LLM  
+/ls - 查看对话列表  
+/model - 查看或者切换模型  
+/new - 创建新对话  
+/op - 授权管理员。op <admin_id>  
+/persona - 查看或者切换 Persona  
+/pi - 代码执行器配置  
+/plugin - 插件管理  
+/provider - 查看或者切换 LLM Provider  
+/reminder - 待办提醒  
+/rename - 重命名对话  
+/reset - 重置 LLM 会话  
+/sid - 获取会话 ID 和 管理员 ID  
+/switch - 通过 /ls 前面的序号切换对话  
+/t2i - 开关文本转图片  
+/tool - 函数工具管理  
+/tts - 开关文本转语音（会话级别）  
+/wl - 添加白名单。wl <sid>
+```
+如果能返回这个就正常
+
+ai功能就是自己去注册一个SiliconFlow硅基流动账号
+然后实名认证一下
+然后去api密钥
+新建api密钥
+随便写个备注
+确认创建
+然后点一下那一串sk-c***********************************k这种格式的东西
+
+他会自动复制
+然后去astrbot的webui
+模型提供商
+下面找到SiliconFlow
+然后填进去，自己看着设置一下就行
+
+2026-1-21
