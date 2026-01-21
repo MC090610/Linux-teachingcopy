@@ -83,7 +83,7 @@ https://www.cvcidc.com/aff/IRVN
 
 点操作
 能看见这个画面
-![[assets/全流程/Pasted image 20260111191929.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111191929.png)
 
 主要看ssh登陆信息和ip地址，自己核对一下机子信息就行
 别的基本不用在意
