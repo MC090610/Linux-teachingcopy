@@ -3,4 +3,4 @@
 
 ---
 ## License
-**License**: GPL-3.0
+**License**: CC BY-NC-ND 4.0
