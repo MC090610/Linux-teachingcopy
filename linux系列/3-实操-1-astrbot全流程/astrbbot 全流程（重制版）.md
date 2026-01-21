@@ -48,7 +48,8 @@ https://www.cvcidc.com/aff/IRVN
 	![](演示文件/assets/全流程/Pasted%20image%2020260111173220.png)
 
 #### 购买服务器
-~~专属全站9折优惠券:HIC90~~ 
+==专属全站9折优惠券:HIC90== 
+
 准备工作完成之后
 	点击订购产品
 	活动
@@ -98,36 +99,37 @@ https://www.cvcidc.com/aff/IRVN
 **下载下来解压一下（没解压工具的自己下一个360压缩去）**
 **（不会解压的自己看电子扫盲课或者自己去b站搜一下，要是这个都不会就别搞了）**
 解压出来应该是这三个文件
-![[assets/全流程/Pasted image 20260111193250.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111193250.png)
 打开“MobaXterm_Personal_24.3”这个文件
 然后让你选择主题，这个随便了，看你自己
-![[assets/全流程/Pasted image 20260111193412.png]]
-点击这个会话![[assets/全流程/Pasted image 20260111193510.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111193412.png)
+
+点击这个会话![](演示文件/assets/全流程/Pasted%20image%2020260111193510.png)
 按照下面的步骤来
-![[assets/全流程/Pasted image 20260111193728.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111193728.png)
 填完应该下面这个样子
-![[assets/全流程/Pasted image 20260111193900.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111193900.png)
 
 > [!WARNING] 注意！
-> 如果你购买的nat机要注意一下端口号！！！！
-> 如果你购买的nat机要注意一下端口号！！！！
-> 如果你购买的nat机要注意一下端口号！！！！
-> 需要自己修改端口号，如果你分不清就不要购买nat机！
+> 如果你购买的nat机要注意一下端口！！！！
+> 如果你购买的nat机要注意一下端口！！！！
+> 如果你购买的nat机要注意一下端口！！！！
+> nat需要自己修改登陆端口，如果你分不清就不要购买nat机！
 
 检查无误，点OK
-![[assets/全流程/Pasted image 20260111194319.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111194319.png)
 这个界面点**Accept**
-![[assets/全流程/Pasted image 20260111194730.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111194730.png)
 会出来这个界面，自己输密码，如果免密太长或者是系统默认的就复制一下
 
 > [!TIP] 热知识
 > 点一下密码能自动复制，MobaXterm里点一下鼠标中键能自动粘贴
 
 如果弹这个了自己选择
-![[assets/全流程/Pasted image 20260111195107.png]]
 
-![[assets/全流程/Pasted image 20260111195452.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111195107.png)
 
+![](演示文件/assets/全流程/Pasted%20image%2020260111195452.png)
 如果看见这个界面
 那么恭喜你成功来到了linux的世界
 
@@ -239,9 +241,9 @@ prepare write and writev hooks
 ```
 你会看见一个登陆页面，你把那串神秘代码复制进去，然后点登录
 登陆成功之后好看见下面这个界面
-![[assets/全流程/Pasted image 20260111222001.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111222001.png)
 咱点一下扫码登陆
-![[assets/全流程/Pasted image 20260111222027.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111222027.png)
 此时此刻你需要拿出你的手机
 	打开qq
 	登陆你的QQ小号
@@ -250,20 +252,20 @@ prepare write and writev hooks
 	然后去扫你屏幕上显示的那个二维码
 	然后确认登陆
 如果没有意外那么应该就能成功登陆上了
-![[assets/全流程/Pasted image 20260111222324.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111222324.png)
 差不多这个样子
 点一下“网络配置”
-![[assets/全流程/Pasted image 20260111222422.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111222422.png)
 然后检查一下，是否和我一样
-![[assets/全流程/Pasted image 20260111222832.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111222832.png)
 这个时候要给你的小号发一条消息，内容是test
 然后点击猫猫日志
-![[assets/全流程/Pasted image 20260111223006.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111223006.png)
 确认会输出以下内容（这里我发了两次）
-![[assets/全流程/Pasted image 20260111223055.png]]
+![](演示文件/assets/全流程/Pasted%20image%2020260111223055.png)
 
-困死我了
-懒得写了
+~~困死我了~~
+~~懒得写了~~
 反正大致流程就是先访问
 ```
 服务器ip:6185
